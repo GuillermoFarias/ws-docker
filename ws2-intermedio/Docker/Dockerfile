@@ -14,11 +14,13 @@ RUN apt-get update && apt-get install -y \
     locales \
     zip \
     jpegoptim optipng pngquant gifsicle \
-    vim \
+    nano \
     unzip \
     git \
     curl \
     cron
+
+RUN echo printenv >> /var/printenv
 
 # Clear cache
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
